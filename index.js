@@ -7,7 +7,10 @@ const puppeteer = require('puppeteer');
 const tempdir = require('tempdir');
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    ignoreHTTPSErrors: true,
+    args: ['--allow-running-insecure-content', '--disable-setuid-sandbox', '--no-sandbox', ],
+  });
   const page = await browser.newPage();
   const workdir = await tempdir();
   let outdir = process.cwd();
