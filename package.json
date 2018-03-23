@@ -7,7 +7,7 @@
     "webgif": "./index.js"
   },
   "scripts": {
-    "test": "true"
+    "test": "./test.sh"
   },
   "repository": {
     "type": "git",
