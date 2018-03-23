@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const GIFEncoder = require('gifencoder');
+const path = require('path');
 const pngFileStream = require('png-file-stream');
 const puppeteer = require('puppeteer');
 const tempdir = require('tempdir');
@@ -21,11 +22,11 @@ const tempdir = require('tempdir');
   });
 
   process.stdout.write('Taking screenshots: .');
-  screenshotTaker = setInterval(() => {
+  screenshotTaker = setInterval(async () => {
     if (page) {
       filename = `${workdir}/T${new Date().getTime()}.png`;
       process.stdout.write('.');
-      page.screenshot({ path: filename, });
+      await page.screenshot({ path: filename, });
     }
   }, 1000);
 
@@ -44,12 +45,11 @@ const tempdir = require('tempdir');
     outdir = workdir;
   }
 
-  console.log(`\nEncoding GIF: ${outdir}/web.gif`);
+  console.log(`\nEncoding GIF: ${outdir}${path.sep}web.gif`);
   const encoder = new GIFEncoder(1024, 768);
   await pngFileStream(`${workdir}/T*png`)
     .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
     .pipe(fs.createWriteStream(`${outdir}/web.gif`));
-  console.log('Done!');
 })();
 
 
@@ -58,3 +58,7 @@ function delay(time) {
     setTimeout(fulfill, time);
   });
 }
+
+process.on('unhandledRejection', function(reason, p) {
+  // console.log("Possibly Unhandled Rejection at: Promise ", p, " reason: ", reason);
+});
