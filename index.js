@@ -6,12 +6,11 @@ const pngFileStream = require('png-file-stream');
 const puppeteer = require('puppeteer');
 const tempdir = require('tempdir');
 
-const encoder = new GIFEncoder(1024, 768);
-
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const workdir = await tempdir();
+  let outdir = process.cwd();
 
   page.setViewport({
     width: 1024,
@@ -19,13 +18,11 @@ const encoder = new GIFEncoder(1024, 768);
   });
 
   process.stdout.write('Taking screenshots: .');
-  screenshotTaker = setInterval(async () => {
+  screenshotTaker = setInterval(() => {
     if (page) {
       filename = `${workdir}/T${new Date().getTime()}.png`;
       process.stdout.write('.');
-      await page.screenshot({
-        path: filename,
-      });
+      page.screenshot({ path: filename, });
     }
   }, 1000);
 
@@ -36,11 +33,20 @@ const encoder = new GIFEncoder(1024, 768);
   await page.close();
   await browser.close();
 
-  console.log('\nEncoding GIF: ');
+  // Check if outdir is writeable, else fallback to workdir
+  try {
+    fs.accessSync(outdir, fs.constants.W_OK);
+  } catch (err) {
+    console.warn(`Output folder is not writeable: [${outdir}], falling back to: [${workdir}]`);
+    outdir = workdir;
+  }
+
+  console.log(`\nEncoding GIF: ${outdir}/web.gif`);
+  const encoder = new GIFEncoder(1024, 768);
   await pngFileStream(`${workdir}/T*png`)
     .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
-    .pipe(fs.createWriteStream(`${workdir}/recording.gif`));
-  console.log(`\n${workdir}/recording.gif`);
+    .pipe(fs.createWriteStream(`${outdir}/web.gif`));
+  console.log('Done!');
 })();
 
 
