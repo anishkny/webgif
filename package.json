@@ -1,0 +1,31 @@
+{
+  "name": "webgif",
+  "version": "0.0.1",
+  "description": "Easily generate animated GIFs from websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anishkny/webgif.git"
+  },
+  "keywords": [
+    "gif",
+    "puppeteer",
+    "web"
+  ],
+  "author": "Anish Karandikar <anishkny@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anishkny/webgif/issues"
+  },
+  "homepage": "https://github.com/anishkny/webgif#readme",
+  "dependencies": {
+    "gifencoder": "^1.1.0",
+    "png-file-stream": "^1.0.0",
+    "progress": "^2.0.0",
+    "puppeteer": "^1.2.0",
+    "tempdir": "^2.0.0"
+  }
+}
