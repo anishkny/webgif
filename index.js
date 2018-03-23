@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const GIFEncoder = require('gifencoder');
+const path = require('path');
 const pngFileStream = require('png-file-stream');
 const puppeteer = require('puppeteer');
 const tempdir = require('tempdir');
@@ -44,12 +45,11 @@ const tempdir = require('tempdir');
     outdir = workdir;
   }
 
-  console.log(`\nEncoding GIF: ${outdir}/web.gif`);
+  console.log(`\nEncoding GIF: ${outdir}${path.sep}web.gif`);
   const encoder = new GIFEncoder(1024, 768);
   await pngFileStream(`${workdir}/T*png`)
     .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
     .pipe(fs.createWriteStream(`${outdir}/web.gif`));
-  console.log('Done!');
 })();
 
 
