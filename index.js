@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const GIFEncoder = require('gifencoder');
 const pngFileStream = require('png-file-stream');

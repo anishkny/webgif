@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Easily generate animated GIFs from websites",
   "main": "index.js",
+  "bin": {
+    "webgif": "./index.js"
+  },
   "scripts": {
     "test": "true"
   },
