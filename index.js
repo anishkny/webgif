@@ -21,11 +21,11 @@ const tempdir = require('tempdir');
   });
 
   process.stdout.write('Taking screenshots: .');
-  screenshotTaker = setInterval(() => {
+  screenshotTaker = setInterval(async () => {
     if (page) {
       filename = `${workdir}/T${new Date().getTime()}.png`;
       process.stdout.write('.');
-      page.screenshot({ path: filename, });
+      await page.screenshot({ path: filename, });
     }
   }, 1000);
 
@@ -58,3 +58,7 @@ function delay(time) {
     setTimeout(fulfill, time);
   });
 }
+
+process.on('unhandledRejection', function(reason, p) {
+  // console.log("Possibly Unhandled Rejection at: Promise ", p, " reason: ", reason);
+});
