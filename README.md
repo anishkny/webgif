@@ -1,6 +1,6 @@
-# **webgif** - * Easily generate animated GIFs from websites *
+# **webgif** - *Easily generate animated GIFs from websites*
 
-# 🚧🚧🚧 &nbsp;&nbsp;&nbsp; WIP! &nbsp;&nbsp;&nbsp; 🚧🚧🚧
+# 🚧🚧🚧 WIP! 🚧🚧🚧
 
 ## Installation
 ```bash
