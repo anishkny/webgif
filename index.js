@@ -3,7 +3,6 @@
 const fs = require('fs');
 const GIFEncoder = require('gifencoder');
 const pngFileStream = require('png-file-stream');
-const ProgressBar = require('progress');
 const puppeteer = require('puppeteer');
 const tempdir = require('tempdir');
 
@@ -19,11 +18,11 @@ const encoder = new GIFEncoder(1024, 768);
     height: 768,
   });
 
-  const screenshotBar = new ProgressBar('Taking screenshots: [:bar]', { total: 10 });
+  process.stdout.write('Taking screenshots: .');
   screenshotTaker = setInterval(async () => {
     if (page) {
       filename = `${workdir}/T${new Date().getTime()}.png`;
-      screenshotBar.tick();
+      process.stdout.write('.');
       await page.screenshot({
         path: filename,
       });
@@ -37,7 +36,7 @@ const encoder = new GIFEncoder(1024, 768);
   await page.close();
   await browser.close();
 
-  console.log('Encoding GIF: ');
+  console.log('\nEncoding GIF: ');
   await pngFileStream(`${workdir}/T*png`)
     .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
     .pipe(fs.createWriteStream(`${workdir}/recording.gif`));
