@@ -13,3 +13,4 @@ deploy:
   api_key: $NPM_AUTH_TOKEN
   on:
     tags: true
+    branch: master
