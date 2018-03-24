@@ -9,7 +9,7 @@ node_js:
 
 jobs:
   include:
-    - stage: npm release
+    - stage: NPM Publish
       os: linux
       deploy:
         provider: npm
