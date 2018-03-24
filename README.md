@@ -4,12 +4,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ji5c66ex9ifog9hk/branch/master?svg=true)](https://ci.appveyor.com/project/anishkny/webgif/branch/master)
 [![NPM Version](https://img.shields.io/npm/v/webgif.svg)](https://www.npmjs.com/package/webgif)
 
-| | |
-| ---: | :--- |
-| **Easy**           | *Just point it to a URL and get an animated GIF!*
-| **Cross-platform** | *Works on Windows, Mac, Linux, without Docker!*
-| **Headless**       | *Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)*
-| **Inspired**       | *By [asciicast2gif](https://github.com/asciinema/asciicast2gif) and wanting to make it easier to use*
+* **Easy**            :point_right:  *Just point it to a URL and get an animated GIF!*
+* **Cross-platform**  :point_right:  *Works on Windows, Mac, Linux, without Docker!*
+* **Headless**        :point_right:  *Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)*
+* **Inspired**        :point_right:  *By [asciicast2gif](https://github.com/asciinema/asciicast2gif) and wanting to make it easier to use*
 
 ## Installation
 ```bash
@@ -54,4 +52,4 @@ Options:
 1. Navigate to target URL and wait for specified duration
 1. Use [gifencoder](https://github.com/eugeneware/gifencoder) to create anumated GIF out of saved screenshots
 
-See [`index.js`](index.js)
+See code: [`index.js`](index.js)
