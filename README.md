@@ -13,7 +13,7 @@ yarn global add webgif || npm i -g webgif
 To navigate to `https://giphy.com/search/lol` and make an animated GIF of duration `10` seconds, execute:
 
 ```bash
-webgif https://giphy.com/search/lol -d 10
+webgif -u https://giphy.com/search/lol -d 10
 ```
 
 ## Options
