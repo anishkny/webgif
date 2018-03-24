@@ -4,6 +4,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ji5c66ex9ifog9hk/branch/master?svg=true)](https://ci.appveyor.com/project/anishkny/webgif/branch/master)
 [![NPM Version](https://img.shields.io/npm/v/webgif.svg)](https://www.npmjs.com/package/webgif)
 
+* Just point it to a URL and get an animated GIF!
+* Cross-platform - works on Windows, Mac, Linux
+* Headless - Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)
+
 ## Installation
 ```bash
 yarn global add webgif || npm i -g webgif
@@ -15,6 +19,10 @@ To navigate to `https://giphy.com/search/lol` and make an animated GIF of durati
 
 ```bash
 webgif -u https://giphy.com/search/lol -d 10
+
+Navigating to URL: https://giphy.com/search/lol
+Taking screenshots: .............
+Encoding GIF: /home/user/web.gif
 ```
 
 ## Options
