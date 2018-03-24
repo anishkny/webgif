@@ -7,6 +7,7 @@
 * Just point it to a URL and get an animated GIF!
 * Cross-platform - works on Windows, Mac, Linux
 * Headless - Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)
+* Inspired by wanting to make [asciicast2gif](https://github.com/asciinema/asciicast2gif) easier to use
 
 ## Installation
 ```bash
