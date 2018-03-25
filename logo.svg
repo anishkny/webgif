@@ -4,11 +4,11 @@
 
  <g>
   <title>background</title>
-  <rect fill="#ffffff" id="canvas_background" height="102" width="602" y="-1" x="-1"/>
+  <rect x="-1" y="-1" width="602" height="102" id="canvas_background" fill="#ffffff"/>
  </g>
  <g>
   <title>Layer 1</title>
-  <text stroke="#000" transform="matrix(2.69157 0 0 2.69157 -198.273 -42.1)" font-weight="bold" font-style="italic" xml:space="preserve" text-anchor="start" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" font-size="24" id="svg_1" y="41.243061" x="161.159795" stroke-width="0" fill="#B10DC9">webgif</text>
-  <path transform="rotate(-90 160.293 51.0306)" id="svg_4" d="m124.292503,82.530602l35.999886,-63.000002l36.00061,63.000002l-72.000496,0z" stroke-width="0" stroke="#000" fill="#B10DC9"/>
+  <text fill="#b10dc9" stroke-width="0" x="158.930613" y="41.243061" id="svg_1" font-size="24" font-family="'Palatino Linotype', 'Book Antiqua', Palatino, serif" text-anchor="start" xml:space="preserve" font-style="italic" font-weight="bold" transform="matrix(2.69157 0 0 2.69157 -198.273 -42.1)" stroke="#000">webgif</text>
+  <path fill="#b10dc9" stroke="#000" stroke-width="0" d="m137.292511,82.530602l35.999878,-63.000002l36.00061,63.000002l-72.000488,0z" id="svg_4" transform="rotate(-90 173.293 51.0306)"/>
  </g>
 </svg>
