@@ -1,6 +1,5 @@
 <p align="center"><img src="logo.svg"></p>
 
-
 # **webgif** - *Easily generate animated GIFs from websites*
 
 [![Build Status](https://travis-ci.org/anishkny/webgif.svg?branch=master)](https://travis-ci.org/anishkny/webgif)
