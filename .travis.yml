@@ -21,15 +21,3 @@ jobs:
           branch: master
           tags: true
           repo: anishkny/webgif
-    - stage: gh-pages
-      node_js: "8"
-      script: echo "Deploying to gh-pages ..."
-      before_deploy: "npm run website"
-      deploy:
-        provider: pages
-        github-token: $GITHUB_TOKEN
-        local-dir: dist/
-        skip_cleanup: true
-        on:
-          branch: master
-          repo: anishkny/webgif
