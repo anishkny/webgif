@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.svg"></p>
+<p align="center"><img src="https://rawgit.com/anishkny/webgif/master/logo.svg"></p>
 
 # **webgif** - *Easily generate animated GIFs from websites*
 
@@ -7,10 +7,10 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/webgif.svg)](https://greenkeeper.io/)
 [![NPM Version](https://img.shields.io/npm/v/webgif.svg)](https://www.npmjs.com/package/webgif)
 
-* **Easy**            :point_right:  *Just point it to a URL and get an animated GIF!*
-* **Cross-platform**  :point_right:  *Works on Windows, Mac, Linux, without Docker!*
-* **Headless**        :point_right:  *Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)*
-* **Inspired**        :point_right:  *By [asciicast2gif](https://github.com/asciinema/asciicast2gif) and wanting to make it easier to use*
+* **Easy**            👉  *Just point it to a URL and get an animated GIF!*
+* **Cross-platform**  👉  *Works on Windows, Mac, Linux, without Docker!*
+* **Headless**        👉  *Uses [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)*
+* **Inspired**        👉  *By [asciicast2gif](https://github.com/asciinema/asciicast2gif) and wanting to make it easier to use*
 
 ## Installation
 ```bash
@@ -55,4 +55,4 @@ Options:
 1. Navigate to target URL and wait for specified duration
 1. Use [gifencoder](https://github.com/eugeneware/gifencoder) and [png-file-stream](https://github.com/eugeneware/png-file-stream) to create animated GIF out of saved screenshots
 
-See code: [`index.js`](index.js)
+See code: [`index.js`](https://github.com/anishkny/webgif/blob/master/index.js)
