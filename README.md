@@ -52,6 +52,6 @@ Options:
 1. Use [Puppeteer](https://github.com/GoogleChrome/puppeteer) to launch a headless Chrome window
 1. Use `setInterval` to take screenshots and save them to disk
 1. Navigate to target URL and wait for specified duration
-1. Use [gifencoder](https://github.com/eugeneware/gifencoder) to create anumated GIF out of saved screenshots
+1. Use [gifencoder](https://github.com/eugeneware/gifencoder) and [png-file-stream](https://github.com/eugeneware/png-file-stream) to create animated GIF out of saved screenshots
 
 See code: [`index.js`](index.js)
