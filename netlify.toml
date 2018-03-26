@@ -1,0 +1,6 @@
+[Settings]
+  ID = "webgif"
+  
+[build]
+  publish = "website/"
+  command = "npm run website"
