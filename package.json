@@ -7,7 +7,8 @@
     "webgif": "./index.js"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "website": "rm -rf dist; mkdir dist; cp website/header.html dist/index.html; showdown makehtml --mute -i README.md >> dist/index.html"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "mocha": "^5.0.5",
-    "shelljs": "^0.8.1"
+    "shelljs": "^0.8.1",
+    "showdown": "^1.8.6"
   }
 }
