@@ -1,6 +1,6 @@
 {
   "name": "webgif",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Easily generate animated GIFs from websites",
   "main": "index.js",
   "bin": {
