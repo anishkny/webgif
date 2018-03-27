@@ -11,8 +11,8 @@
     "website": "mkdir website; (cat header.html; showdown makehtml -m -i README.md) > website/index.html"
   },
   "engines": {
-    "node": ">=6.4.0"
-  },  
+    "node": ">=7.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anishkny/webgif.git"
