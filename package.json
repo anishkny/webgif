@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "website": "mkdir website; (cat header.html; showdown makehtml -m -i README.md) > website/index.html"
+    "website": "mkdir -p website; (cat header.html; showdown makehtml -m -i README.md) > website/index.html"
   },
   "engines": {
     "node": ">=7.6.0"
