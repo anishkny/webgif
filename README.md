@@ -1,4 +1,4 @@
-<p align="center"><img src="https://rawgit.com/anishkny/webgif/master/logo.svg"></p>
+<p align="center"><img alt="logo" src="https://rawgit.com/anishkny/webgif/master/logo.svg"></p>
 
 ## *Easily generate animated GIFs from websites*
 
