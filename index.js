@@ -34,29 +34,33 @@ const argv = require('yargs')
   });
 
   console.log(`Navigating to URL: ${argv.url}`);
+  await page.goto(argv.url);
+
   process.stdout.write('Taking screenshots: .');
   const screenshotPromises = [];
-  screenshotTaker = setInterval(async () => {
-    if (page) {
-      filename = `${workdir}/T${new Date().getTime()}.png`;
-      process.stdout.write('.');
-      screenshotPromises.push(page.screenshot({ path: filename, }));
-    }
-  }, 1000);
+  for (let i = 1; i <= argv.duration; ++i) {
+    filename = `${workdir}/T${new Date().getTime()}.png`;
+    process.stdout.write('.');
+    screenshotPromises.push(page.screenshot({ path: filename, }));
+    await delay(1000);
+  }
 
-  await page.goto(argv.url);
-  setTimeout(async () => {
-    clearInterval(screenshotTaker);
-    await Promise.all(screenshotPromises);
-    await page.close();
-    await browser.close();
-    console.log(`\nEncoding GIF: ${argv.output}`);
-    const encoder = new GIFEncoder(1024, 768);
-    await pngFileStream(`${workdir}/T*png`)
-      .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
-      .pipe(fs.createWriteStream(`${argv.output}`));
-  }, argv.duration * 1000)
+  await delay(1000);
+  await Promise.all(screenshotPromises);
+  console.log(`\nEncoding GIF: ${argv.output}`);
+  const encoder = new GIFEncoder(1024, 768);
+  await pngFileStream(`${workdir}/T*png`)
+    .pipe(encoder.createWriteStream({ repeat: 0, delay: 200, quality: 20 }))
+    .pipe(fs.createWriteStream(`${argv.output}`));
+  await page.close();
+  await browser.close();
 
 })();
 
-process.on('unhandledRejection', function(reason, p) {});
+process.on('unhandledRejection', function(reason, p) {
+  throw new Error(reason);
+});
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
