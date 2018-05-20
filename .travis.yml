@@ -12,7 +12,7 @@ node_js:
 
 after_script:
   - sleep 10
-  - cat ./coverage/lcov.info | npx coveralls
+  - if [[ "$TRAVIS_OS_NAME" == "linux" && "$TRAVIS_NODE_VERSION" == "8" ]]; then cat ./coverage/lcov.info | npx coveralls; fi
 
 matrix:
   exclude:
