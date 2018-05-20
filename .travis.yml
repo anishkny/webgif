@@ -10,6 +10,10 @@ node_js:
   - 9
   - 10
 
+after_script:
+  - sleep 10
+  - cat ./coverage/lcov.info | npx coveralls
+
 matrix:
   exclude:
   - os: osx

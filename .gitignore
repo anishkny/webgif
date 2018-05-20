@@ -1,4 +1,7 @@
 node_modules
+package-lock.json
 yarn.lock
 web.gif
 website/
+.nyc_output/
+coverage/

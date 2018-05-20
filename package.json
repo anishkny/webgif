@@ -7,7 +7,7 @@
     "webgif": "./index.js"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "nyc -r text -r html -r lcov mocha",
     "website": "mkdir -p website; (cat header.html; showdown makehtml -m -i README.md) > website/index.html"
   },
   "engines": {
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
+    "nyc": "^11.8.0",
     "shelljs": "^0.8.1",
     "showdown": "^1.8.6"
   }
