@@ -57,6 +57,7 @@ const argv = require('yargs')
 
 })();
 
+/* istanbul ignore next */
 process.on('unhandledRejection', function(reason, p) {
   throw new Error(reason);
 });

@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/anishkny/webgif.svg?branch=master)](https://travis-ci.org/anishkny/webgif)
 [![Build status](https://ci.appveyor.com/api/projects/status/ji5c66ex9ifog9hk/branch/master?svg=true)](https://ci.appveyor.com/project/anishkny/webgif/branch/master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/webgif.svg)](https://greenkeeper.io/)
+[![Coverage Status](https://coveralls.io/repos/github/anishkny/webgif/badge.svg)](https://coveralls.io/github/anishkny/webgif)
 ![node](https://img.shields.io/node/v/webgif.svg)
 [![NPM Version](https://img.shields.io/npm/v/webgif.svg)](https://www.npmjs.com/package/webgif)
 
