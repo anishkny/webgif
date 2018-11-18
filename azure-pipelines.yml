@@ -1,37 +1,15 @@
-strategy:
-  matrix:
-    Node8:
-      node_version: 8.x
-      vm_image: 'Ubuntu 16.04'
-    Node10:
-      node_version: 10.x
-      vm_image: 'Ubuntu 16.04'
-    Node10_Mac:
-      node_version: 10.x
-      vm_image: 'macOS-10.13'
-    Node10_Win:
-      node_version: 10.x
-      vm_image: 'vs2017-win2016'
-    Node11:
-      node_version: 11.x
-      vm_image: 'Ubuntu 16.04'
+jobs:
+- template: azure-pipelines-template.yml
+  parameters:
+    name: macOS
+    vmImage: macOS-10.13
 
-pool:
-  vmImage: ${{ vm_image }}
+- template: azure-pipelines-template.yml
+  parameters:
+    name: Linux
+    vmImage: ubuntu-16.04
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: $(node_version)
-  displayName: 'Install Node.js'
-
-- task: Npm@1
-  displayName: 'Install dependencies'
-  inputs:
-    command: install
-
-- task: Npm@1
-  displayName: 'Run tests'
-  inputs:
-    command: custom
-    customCommand: 'test'
+- template: azure-pipelines-template.yml
+  parameters:
+    name: Windows
+    vmImage: vs2017-win2016
