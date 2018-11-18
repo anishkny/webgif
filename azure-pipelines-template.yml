@@ -29,3 +29,8 @@ jobs:
     inputs:
       command: custom
       customCommand: 'test'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'results/mocha-test-results.xml'

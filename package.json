@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.18.0",
+    "mocha-multi-reporters": "^1.1.7",
     "nyc": "^12.0.1",
     "shelljs": "^0.8.1",
     "showdown": "^1.8.6"
