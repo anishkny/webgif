@@ -7,7 +7,7 @@
     "webgif": "./index.js"
   },
   "scripts": {
-    "test": "nyc -r text -r html -r lcov mocha",
+    "test": "nyc -r text -r html -r lcov -r cobertura mocha",
     "website": "mkdir -p website; (cat header.html; showdown makehtml -m -i README.md) > website/index.html"
   },
   "engines": {
