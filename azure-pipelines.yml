@@ -17,7 +17,7 @@ strategy:
       vm_image: 'Ubuntu 16.04'
 
 pool:
-  vmImage: $(vm_image)
+  vmImage: ${{ vm_image }}
 
 steps:
 - task: NodeTool@0
