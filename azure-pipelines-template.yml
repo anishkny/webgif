@@ -1,0 +1,42 @@
+jobs:
+- job: ${{ parameters.name }}
+
+  pool:
+    vmImage: ${{ parameters.vmImage }}
+
+  strategy:
+    matrix:
+      Node8:
+        node_version: 8.x
+      Node10:
+        node_version: 10.x
+      Node11:
+        node_version: 11.x
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+    displayName: 'Install Node.js'
+
+  - task: Npm@1
+    displayName: 'Install dependencies'
+    inputs:
+      command: install
+
+  - task: Npm@1
+    displayName: 'Run tests'
+    inputs:
+      command: custom
+      customCommand: 'test'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'results/mocha-test-results.xml'
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+      reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'

@@ -2,10 +2,9 @@
 
 ## *Easily generate animated GIFs from websites*
 
-[![Build Status](https://travis-ci.org/anishkny/webgif.svg?branch=master)](https://travis-ci.org/anishkny/webgif)
-[![Build status](https://ci.appveyor.com/api/projects/status/ji5c66ex9ifog9hk/branch/master?svg=true)](https://ci.appveyor.com/project/anishkny/webgif/branch/master)
+[![Build Status](https://dev.azure.com/anishkarandikar/webgif/_apis/build/status/anishkny.webgif)](https://dev.azure.com/anishkarandikar/webgif/_build/latest?definitionId=2)
 [![Greenkeeper badge](https://badges.greenkeeper.io/anishkny/webgif.svg)](https://greenkeeper.io/)
-[![Coverage Status](https://coveralls.io/repos/github/anishkny/webgif/badge.svg)](https://coveralls.io/github/anishkny/webgif)
+[![Coverage Status](https://img.shields.io/azure-devops/coverage/anishkarandikar/webgif/2/master.svg)](https://dev.azure.com/anishkarandikar/webgif/_build?definitionId=2)
 ![node](https://img.shields.io/node/v/webgif.svg)
 [![NPM Version](https://img.shields.io/npm/v/webgif.svg)](https://www.npmjs.com/package/webgif)
 
