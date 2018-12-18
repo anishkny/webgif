@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/anishkny/webgif#readme",
   "dependencies": {
-    "gifencoder": "^1.1.0",
+    "gifencoder": "^2.0.0",
     "png-file-stream": "^1.0.0",
     "puppeteer": "^1.2.0",
     "tempdir": "^2.0.0",
