@@ -48,7 +48,7 @@ Options:
 
 ### Sample GIF
 
-![Sample GIF](https://storage.googleapis.com/webgif/web.gif)
+![Sample GIF](https://web.archive.org/web/20210124173628if_/https://camo.githubusercontent.com/ff5527b48ab38f7e6b582585265ddedbf5f7ee63edeacaef19169a1fcc6c734e/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f7765626769662f7765622e676966)
 
 ### How it works
 
